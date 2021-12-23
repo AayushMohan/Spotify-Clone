@@ -6,6 +6,8 @@ async function refreshAccessToken(token) {
   try {
     spotifyApi.setAccessToken(token.accessToken);
     spotifyApi.setRefreshToken(token.refreshToken);
+
+    const { body } = await SpotifyApi.refreshAccessToken();
   } catch (error) {
     console.error(error);
 
