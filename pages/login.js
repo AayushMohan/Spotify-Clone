@@ -8,7 +8,7 @@ const Login = ({ providers }) => {
 
       {Object.values(providers).map((provider) => (
         <div>
-          <button>test</button>
+          <button>Login with {provider.name}</button>
         </div>
       ))}
     </div>
