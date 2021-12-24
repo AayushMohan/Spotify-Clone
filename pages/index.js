@@ -1,3 +1,4 @@
+import Center from "../Components/Center";
 import Sidebar from "../Components/Sidebar";
 
 export default function Home() {
@@ -6,7 +7,6 @@ export default function Home() {
       <main className="">
         <Sidebar />
         <Center />
-        {/* Center */}
       </main>
       <div>{/* Player */}</div>
     </div>
