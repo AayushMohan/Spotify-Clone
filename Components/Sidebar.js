@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   HomeIcon,
   SearchIcon,
@@ -7,6 +8,7 @@ import {
   HeartIcon,
   RssIcon,
 } from "@heroicons/react/outline";
+
 import { signOut, useSession } from "next-auth/react";
 
 function Sidebar() {
