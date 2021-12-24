@@ -2,8 +2,8 @@ import React from "react";
 
 const Center = () => {
   return (
-    <div className="flex flex-grow">
-      <h1>I am a center</h1>
+    <div className="flex flex-grow text-white">
+      <h1>I am center</h1>
     </div>
   );
 };
