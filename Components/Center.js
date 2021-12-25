@@ -7,7 +7,7 @@ const Center = () => {
     <div className="flex flex-grow text-white">
       <h1>I am center</h1>
       <header>
-        <div>
+        <div className="">
           <img
             className="rounded-full w-190 h-10"
             src="{session?.user.image}"
