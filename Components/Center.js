@@ -13,6 +13,7 @@ const Center = () => {
             src="{session?.user.image}"
             alt=""
           />
+          <h2>{session?.user.name}</h2>
         </div>
       </header>
     </div>
