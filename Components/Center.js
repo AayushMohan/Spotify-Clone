@@ -8,7 +8,7 @@ const Center = () => {
       <h1>I am center</h1>
       <header>
         <div>
-          <img src="" alt=""></img>
+          <img src="{session.user.image}" alt=""></img>
         </div>
       </header>
     </div>
