@@ -1,5 +1,6 @@
 import { useSession } from "next-auth/react";
 import React from "react";
+import { ChevronDownIcon } from "@heroicons/react/outline";
 
 const Center = () => {
   const { data: session } = useSession();
