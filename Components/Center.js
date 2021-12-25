@@ -8,7 +8,7 @@ const Center = () => {
     <div className="flex flex-grow text-white">
       <h1>I am center</h1>
       <header>
-        <div className="">
+        <div className="flex items-center bg-black space-x-3 opacity-90">
           <img
             className="rounded-full w-190 h-10"
             src="{session?.user.image}"
