@@ -1,6 +1,7 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
+import { shuffle } from "lodash";
 
 const colors = [
   "from-indigo-500",
@@ -17,7 +18,7 @@ const Center = () => {
   const [color, setColor] = useState(null);
 
   useEffect(() => {
-    setColor();
+    setColor(shuffle(colors).pop());
   }, []);
 
   return (
