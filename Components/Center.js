@@ -14,6 +14,12 @@ const colors = [
 
 const Center = () => {
   const { data: session } = useSession();
+  const [color, setColor] = useState(null);
+
+  useEffect(() => {
+    setColor();
+  }, []);
+
   return (
     <div className="flex-grow ">
       <header className="absolute top-5 right-8">
