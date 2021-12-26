@@ -9,6 +9,7 @@ export default function Home() {
         <Sidebar />
         <Center />
       </main>
+
       <div>{/* Player */}</div>
     </div>
   );
