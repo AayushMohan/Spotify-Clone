@@ -65,6 +65,10 @@ const Center = () => {
           </h1>
         </div>
       </section>
+
+      <div>
+        <Songs />
+      </div>
     </div>
   );
 };
