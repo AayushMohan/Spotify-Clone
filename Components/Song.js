@@ -1,7 +1,21 @@
 import React from "react";
+import useSpotify from "../hooks/useSpotify";
 
 const Song = ({ order, track }) => {
-  return <div></div>;
+  const spotifyApi = useSpotify();
+
+  return (
+    <div>
+      <div>
+        <p>{order + 1}</p>
+        <img
+          className="h-10 w-10"
+          src={track.track.album.images[0].url}
+          alt=""
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Song;
