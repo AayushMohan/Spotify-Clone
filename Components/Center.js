@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { shuffle } from "lodash";
@@ -36,7 +36,7 @@ const Center = () => {
       </header>
 
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black from-red-500 h-80 text-white padding-8 `}
+        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white padding-8 `}
       >
         {/* <img src="" alt="" /> */}
         <h1>Hello</h1>
