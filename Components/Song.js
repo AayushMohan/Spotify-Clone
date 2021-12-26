@@ -20,11 +20,10 @@ function Song({ order, track }) {
           </p>
           <p className="w-40">{track.track.artists[0].name}</p>
         </div>
-
-        <div className="flex items-center justify-between ml-auto md:ml-0">
-          <p className="w-40 hidden md:inline">{track.track.album.name}</p>
-          <p>{millisToMinutesAndSeconds(track.track.duration_ms)}</p>
-        </div>
+      </div>
+      <div className="flex item-center justify-between ml-auto md:ml-0">
+        <p className="w-40 hidden md:inline">{track.track.album.name}</p>
+        <p>{millisToMinutesAndSeconds(track.track.duration_ms)}</p>
       </div>
     </div>
   );
