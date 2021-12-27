@@ -51,6 +51,9 @@ function Player() {
           <p>{songInfo?.artists[0]?.name}</p>
         </div>
       </div>
+
+      {/* Center */}
+      <div className="flex items-center justify-center"></div>
     </div>
   );
 }
