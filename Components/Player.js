@@ -38,7 +38,7 @@ function Player() {
   }, [currentTrackIdState, spotifyApi, session]);
 
   return (
-    <div>
+    <div className="">
       {/* Left */}
       <div>
         <img
@@ -46,6 +46,10 @@ function Player() {
           src={songInfo?.album.images?.[0]?.url}
           alt=""
         />
+        <div>
+          <h3>{songInfo?.name}</h3>
+          <p>{songInfo?.artists[0]?.name}</p>
+        </div>
       </div>
     </div>
   );
