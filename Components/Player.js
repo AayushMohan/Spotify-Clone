@@ -1,3 +1,4 @@
+import { useSession } from "next-auth/react";
 import React from "react";
 import { useRecoilState } from "recoil";
 import { currentTrackIdState, isPlayingState } from "../atoms/songAtom";
