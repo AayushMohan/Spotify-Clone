@@ -38,7 +38,7 @@ function Player() {
   }, [currentTrackIdState, spotifyApi, session]);
 
   return (
-    <div className="">
+    <div className="h-24 bg-gradient-to-b from-black to-gray-900 text-white">
       {/* Left */}
       <div>
         <img
