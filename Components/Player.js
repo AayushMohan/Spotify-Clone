@@ -23,7 +23,10 @@ function Player() {
         console.log("Now Playing: ", data.body?.item);
         setCurrentIdTrack(data.body?.item.id);
 
-        spotifyApi.getMyCurrentPlaybackState().then((data) => {});
+        spotifyApi.getMyCurrentPlaybackState().then((data) => {
+          console.log("Now Playing: ", data.body);
+          setIsPlaying(data.body?.is_playing);
+        });
       });
     }
   };
