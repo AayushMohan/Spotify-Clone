@@ -32,7 +32,8 @@ function Player() {
 
   useEffect(() => {
     if (spotifyApi.getAccessToken() && !currentTrackId) {
-      // fetch the song info
+      fetchCurrentSong();
+      setVolume(50);
     }
   }, [currentTrackIdState, spotifyApi, session]);
 
