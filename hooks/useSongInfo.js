@@ -12,8 +12,15 @@ const useSongInfo = () => {
     const fetchSongInfo = async () => {
       if (currentIdTrack) {
         const trackInfo = await fetch(
-          `https://api.spotify.com/v1/tracks/${currentIdTrack}`
-        );
+          `https://api.spotify.com/v1/tracks/${currentIdTrack}`,
+          {
+            headers: {
+              Authorization: `Bearer ${spotifyApi.getAccessToken()}`,
+            },
+          }
+        ).then((res) => res.json());
+
+        setSongInfo(trackInfo);
       }
     };
     fetchSongInfo();
