@@ -1,5 +1,6 @@
+import { data } from "autoprefixer";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { currentTrackIdState, isPlayingState } from "../atoms/songAtom";
 import useSongInfo from "../hooks/useSongInfo";
@@ -16,11 +17,29 @@ function Player() {
 
   const songInfo = useSongInfo();
 
+  const fetchCurrentSong = () => {
+    if (!songInfo) {
+      spotifyApi.getMyCurrentPlayingTrack().then((data) => {
+        setCurrentIdTrack(data.body?.item.id);
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (spotifyApi.getAccessToken() && !currentTrackId) {
+      // fetch the song info
+    }
+  }, [currentTrackIdState, spotifyApi, session]);
+
   return (
     <div>
       {/* Left */}
       <div>
-        <img src={songInfo?.album.images?.[0]?.url} alt="" />
+        <img
+          className="hidden md:inline h-10 w-10"
+          src={songInfo?.album.images?.[0]?.url}
+          alt=""
+        />
       </div>
     </div>
   );
