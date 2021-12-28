@@ -12,9 +12,7 @@ import {
   VolumeUpIcon,
   SwitchHorizontalIcon,
 } from "@heroicons/react/solid";
-
-import { data } from "autoprefixer";
-import { debounce, set } from "lodash";
+import { debounce } from "lodash";
 import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
@@ -37,7 +35,7 @@ function Player() {
     if (!songInfo) {
       spotifyApi.getMyCurrentPlayingTrack().then((data) => {
         console.log("Now Playing: ", data.body?.item);
-        setCurrentIdTrack(data.body?.item.id);
+        setCurrentIdTrack(data.body?.item?.id);
 
         spotifyApi.getMyCurrentPlaybackState().then((data) => {
           setIsPlaying(data.body?.is_playing);
