@@ -1,3 +1,18 @@
+import {
+  HeartIcon,
+  VolumeUpIcon as VolumeDownIcon,
+} from "@heroicons/react/outline";
+
+import {
+  FastForwardIcon,
+  PauseIcon,
+  PlayIcon,
+  ReplyIcon,
+  RewindIcon,
+  VolumeUpIcon,
+  SwitchHorizontalIcon,
+} from "@heroicons/react/solid";
+
 import { data } from "autoprefixer";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -55,6 +70,10 @@ function Player() {
       {/* Center */}
       <div>
         <SwitchHorizontalIcon className="button" />
+        <RewindIcon
+          //onClick={() => spotifyApi.skipToPrevious()} -- The API is not working
+          className="button"
+        />
       </div>
     </div>
   );
