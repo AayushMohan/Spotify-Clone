@@ -80,6 +80,12 @@ function Player() {
         ) : (
           <PlayIcon className="button w-10 h-10" />
         )}
+
+        <FastForwardIcon
+          //  onClick={() => spotifyApi.skipToNext()} -- Api is not working
+          className="button"
+        />
+        <ReplyIcon className="button" />
       </div>
     </div>
   );
