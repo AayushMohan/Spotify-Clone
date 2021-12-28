@@ -74,6 +74,12 @@ function Player() {
           //onClick={() => spotifyApi.skipToPrevious()} -- The API is not working
           className="button"
         />
+
+        {isPlaying ? (
+          <PauseIcon className="button w-10 h-10" />
+        ) : (
+          <PlayIcon className="button w-10 h-10" />
+        )}
       </div>
     </div>
   );
