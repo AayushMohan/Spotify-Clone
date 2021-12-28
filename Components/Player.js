@@ -14,7 +14,7 @@ import {
 } from "@heroicons/react/solid";
 
 import { data } from "autoprefixer";
-import { set } from "lodash";
+import { debounce, set } from "lodash";
 import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
@@ -73,8 +73,9 @@ function Player() {
 
   const debouncedAdjustVolume = useCallback(
     debounce((volume) => {
-      spotifyApi.setVolume(volume);
-    }, 500)
+      spotifyApi.setVolume(volume).catch((err) => {});
+    }, 500),
+    []
   );
 
   return (
