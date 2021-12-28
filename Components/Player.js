@@ -68,7 +68,7 @@ function Player() {
       </div>
 
       {/* Center */}
-      <div>
+      <div className="flex items-center justify-evenly">
         <SwitchHorizontalIcon className="button" />
         <RewindIcon
           //onClick={() => spotifyApi.skipToPrevious()} -- The API is not working
