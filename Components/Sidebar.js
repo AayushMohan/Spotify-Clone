@@ -17,7 +17,9 @@ function Sidebar() {
   const spotifyApi = useSpotify();
   const { data: session, status } = useSession();
   const [playlists, setPlaylists] = useState([]);
-  const [playlistId, setPlaylistsId] = useRecoilState(playlistIdState);
+  const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
+
+  console.log("You Picked A Playlist >>>", playlistId);
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
@@ -71,7 +73,7 @@ function Sidebar() {
         {playlists.map((playlist) => (
           <p
             key={playlist.id}
-            onClick={() => setPlaylistsId(playlist.id)}
+            onClick={() => setPlaylistId(playlist.id)}
             className="cursor-pointer hover:text-white"
           >
             {playlist.name}
