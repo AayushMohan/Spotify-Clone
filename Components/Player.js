@@ -126,8 +126,9 @@ function Player() {
           min={0}
           max={100}
         />
+
         <VolumeUpIcon
-          onClick={volume < 100 && setVolume(volume + 10)}
+          onClick={() => volume < 100 && setVolume(volume + 10)}
           className="button"
         />
       </div>
