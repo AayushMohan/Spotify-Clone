@@ -1,3 +1,5 @@
+import React from "react";
+
 import {
   HeartIcon,
   VolumeUpIcon as VolumeDownIcon,
